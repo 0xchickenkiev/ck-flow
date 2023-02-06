@@ -1,0 +1,25 @@
+USE [WH_Control]
+GO
+
+/****** Object:  Table [Log].[Log]    Script Date: 06/02/2023 15:09:47 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [Log].[Log](
+	[LogId] [int] IDENTITY(1,1) NOT NULL,
+	[LoadDate] [datetime2](7) NOT NULL,
+	[Run] [smallint] NOT NULL,
+	[Procedure] [nvarchar](128) NOT NULL,
+	[Step] [nvarchar](128) NOT NULL,
+	[Status] [nvarchar](10) NULL,
+	[StartDateTime] [datetime2](7) NULL,
+	[EndDateTime] [datetime2](7) NULL,
+	[Message] [nvarchar](max) NULL,
+	[RowsProcessed] [bigint] NULL
+)
+GO
+
+
